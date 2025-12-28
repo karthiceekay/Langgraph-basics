@@ -2,4 +2,8 @@ langgraph
 langchain
 langchain-core
 langchain-community
+langchain_groq
 pydantic
+
+langchain-wikipedia
+python-dotenv
