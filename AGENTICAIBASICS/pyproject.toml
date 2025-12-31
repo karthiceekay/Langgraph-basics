@@ -14,6 +14,7 @@ dependencies = [
     "langchain-tavily>=0.2.16",
     "langgraph>=1.0.5",
     "langgraph-cli[inmem]>=0.4.11",
+    "moneycontrol>=1.0.2",
     "pydantic>=2.12.5",
     "wikipedia>=1.4.0",
     "yahooquery>=2.4.1",

@@ -48,6 +48,6 @@ def simple_screener(screen_type:str)-> str:
     return f"Stock Screener Results: {output_data}"
 
 if __name__ == '__main__': 
-    print(simple_screener.invoke({"screen_type":"day_gainers"}))
+    print(simple_screener.invoke({"screen_type":"day_gainers",}))
 
     
