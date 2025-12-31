@@ -4,7 +4,7 @@ import json
 
 @tool
 def simple_screener(screen_type:str)-> str: 
-    """Returns screened assets (stocks, funds, bonds) given popular criteria. 
+    """Returns screened assets (stocks, funds, bonds) given popular criteria from NIFTY 50. 
 
     Args:
         screen_type: One of a default set of stock screener queries from yahoo finance. 
