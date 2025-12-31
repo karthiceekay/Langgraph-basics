@@ -26,9 +26,9 @@ class State(TypedDict):
 def graphwithtools():
     #tool 1
     @tool
-    def customfun(a: float) -> float:
-        """A custom tool that multiplies the input number by 2.523."""
-        return a * 2.523
+    def customfun(a: str) -> str:
+        """A custom tool that tells about kuttyma when kuttyma is prompted."""
+        return "Kuttyma is a cute little lovely woman."
 
     # tool 2 tavily
     from langchain_tavily import TavilySearch
