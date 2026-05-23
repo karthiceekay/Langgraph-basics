@@ -13,11 +13,12 @@ from langgraph.checkpoint.memory import InMemorySaver
 
 # adding tool nodes
 from fintool import simple_screener
+from fintool_nse import get_price
 
 # create llm
 llm = ChatGroq(model="llama-3.1-8b-instant", max_tokens=500)
 
-tools = [simple_screener]
+tools = [simple_screener, get_price]
 toolnode = ToolNode(tools)
 llm_with_tools = llm.bind_tools(tools)
 
@@ -45,6 +46,6 @@ print(memorygraph_builder)
 if __name__ == "__main__":
     while True:
         prompt = input(" Enter your prompt: ")
-        messages = [SystemMessage(content="You are a financial assistant. You only have access to the simple_screener tool. Do not use any other tools."), prompt]
+        messages = [SystemMessage(content="You are a financial assistant. You have access to the simple_screener and get_price tools."), prompt]
         response = memorygraph_builder.invoke({"messages": messages}, config={"configurable": {"thread_id" : 1234}})
         print(response['messages'][-1].content)
